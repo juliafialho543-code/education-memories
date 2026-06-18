@@ -14,11 +14,22 @@ import {
   Star,
   Compass,
 } from "lucide-react";
-import portrait from "@/assets/portrait-julia.jpg";
+import portraitAsset from "@/assets/portrait-beach.jpeg.asset.json";
 import heroBooks from "@/assets/hero-books.jpg";
-import schoolElementary from "@/assets/school-elementary.jpg";
+import schoolFundamentalAsset from "@/assets/school-fundamental.png.asset.json";
 import schoolHigh from "@/assets/school-high.jpg";
 import futureImg from "@/assets/future.jpg";
+import ipatinga1 from "@/assets/ipatinga-1.png.asset.json";
+import ipatinga2 from "@/assets/ipatinga-2.png.asset.json";
+import ipatinga3 from "@/assets/ipatinga-3.png.asset.json";
+import diamantina1 from "@/assets/diamantina-1.png.asset.json";
+import diamantina2 from "@/assets/diamantina-2.png.asset.json";
+import diamantina3 from "@/assets/diamantina-3.png.asset.json";
+import quadrilha1 from "@/assets/quadrilha-1.jpeg.asset.json";
+import quadrilha2 from "@/assets/quadrilha-2.jpeg.asset.json";
+
+const portrait = portraitAsset.url;
+const schoolElementary = schoolFundamentalAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -201,12 +212,16 @@ function MemoryCard({
   title,
   description,
   photos = 3,
+  images,
 }: {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   description: string;
   photos?: number;
+  images?: string[];
 }) {
+  const count = images?.length ?? photos;
+  const gridCols = count === 2 ? "grid-cols-2" : "grid-cols-3";
   return (
     <div className="reveal rounded-3xl bg-card border border-border/60 shadow-card overflow-hidden hover:shadow-soft transition-shadow">
       <div className="p-6 sm:p-8">
@@ -219,10 +234,20 @@ function MemoryCard({
             <p className="mt-2 text-muted-foreground leading-relaxed">{description}</p>
           </div>
         </div>
-        <div className="mt-6 grid grid-cols-3 gap-3">
-          {Array.from({ length: photos }).map((_, i) => (
-            <PhotoSlot key={i} label={`Foto ${i + 1}`} />
-          ))}
+        <div className={`mt-6 grid ${gridCols} gap-3`}>
+          {images
+            ? images.map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt={`${title} — foto ${i + 1}`}
+                  loading="lazy"
+                  className="aspect-[4/3] w-full rounded-xl object-cover border border-border/60 shadow-card"
+                />
+              ))
+            : Array.from({ length: photos }).map((_, i) => (
+                <PhotoSlot key={i} label={`Foto ${i + 1}`} />
+              ))}
         </div>
       </div>
     </div>
@@ -298,16 +323,19 @@ function Fundamental() {
             icon={Compass}
             title="Excursão para Ipatinga"
             description="Uma viagem inesquecível: o encanto do shopping pela primeira vez e o zoológico cheio de descobertas, risadas e fotos com os colegas."
+            images={[ipatinga1.url, ipatinga2.url, ipatinga3.url]}
           />
           <MemoryCard
             icon={MapPin}
             title="Excursão para Diamantina"
             description="A história viva nos monumentos históricos e o fortalecimento da minha amizade com a Alice, que se tornou uma das memórias mais doces dessa fase."
+            images={[diamantina1.url, diamantina2.url, diamantina3.url]}
           />
           <MemoryCard
             icon={Sparkles}
-            title="Festa Pré-Adolescente"
+            title="Quadrilha"
             description="Aquele momento mágico de confraternização com os colegas — música, dança e a alegria simples de estar junto."
+            images={[quadrilha1.url, quadrilha2.url]}
           />
           <MemoryCard
             icon={Trophy}
