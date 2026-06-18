@@ -17,7 +17,7 @@ import {
 import portraitAsset from "@/assets/portrait-beach.jpeg.asset.json";
 import heroBooks from "@/assets/hero-books.jpg";
 import schoolFundamentalAsset from "@/assets/school-fundamental.png.asset.json";
-import futureImg from "@/assets/future.jpg";
+import futureAsset from "@/assets/presente-futuro.png.asset.json";
 import ipatinga1 from "@/assets/ipatinga-1.png.asset.json";
 import ipatinga2 from "@/assets/ipatinga-2.png.asset.json";
 import ipatinga3 from "@/assets/ipatinga-3.png.asset.json";
