@@ -27,6 +27,16 @@ import diamantina2 from "@/assets/diamantina-2.png.asset.json";
 import diamantina3 from "@/assets/diamantina-3.png.asset.json";
 import quadrilha1 from "@/assets/quadrilha-1.jpeg.asset.json";
 import quadrilha2 from "@/assets/quadrilha-2.jpeg.asset.json";
+import fundamentalTurma from "@/assets/fundamental-turma.png.asset.json";
+import fundamentalAtividades from "@/assets/fundamental-atividades.png.asset.json";
+import fundamentalEscolaExtra from "@/assets/fundamental-escola-extra.png.asset.json";
+import pandemiaFormatura1 from "@/assets/pandemia-formatura-1.png.asset.json";
+import pandemiaFormatura2 from "@/assets/pandemia-formatura-2.png.asset.json";
+import medioEscolaTimeline from "@/assets/medio-escola.png.asset.json";
+import medioEscola from "@/assets/medio-patio.png.asset.json";
+import medioTurma from "@/assets/medio-sala.png.asset.json";
+import medioPatio from "@/assets/medio-turma.png.asset.json";
+import medioSala from "@/assets/medio-aula.png.asset.json";
 
 const portrait = portraitAsset.url;
 const schoolElementary = schoolFundamentalAsset.url;
@@ -313,9 +323,9 @@ function Fundamental() {
         />
 
         <div className="reveal grid sm:grid-cols-3 gap-3 mb-12">
-          <PhotoSlot label="A escola" />
-          <PhotoSlot label="A turma" />
-          <PhotoSlot label="Atividades" />
+          <img src={fundamentalEscolaExtra.url} alt="Ensino fundamental — a escola" loading="lazy" className="aspect-[4/3] w-full rounded-xl object-cover border border-border/60 shadow-card" />
+          <img src={fundamentalTurma.url} alt="Ensino fundamental — a turma" loading="lazy" className="aspect-[4/3] w-full rounded-xl object-cover border border-border/60 shadow-card" />
+          <img src={fundamentalAtividades.url} alt="Ensino fundamental — atividades" loading="lazy" className="aspect-[4/3] w-full rounded-xl object-cover border border-border/60 shadow-card" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -341,6 +351,7 @@ function Fundamental() {
             icon={Trophy}
             title="Formatura na Pandemia"
             description="Sem grandes salões, mas com afeto de sobra: um churrasco em um sítio com piscina celebrou o fim de um ciclo de forma simples e marcante."
+            images={[pandemiaFormatura1.url, pandemiaFormatura2.url]}
           />
         </div>
 
@@ -365,14 +376,14 @@ function Medio() {
           school="Escola Estadual Regina Pacis"
           location="Raul Soares — MG"
           period="2022 a 2024"
-          image={schoolHigh}
+          image={medioEscolaTimeline.url}
         />
 
         <div className="reveal grid sm:grid-cols-4 gap-3 mb-12">
-          <PhotoSlot label="Escola" />
-          <PhotoSlot label="Turma" />
-          <PhotoSlot label="Pátio" />
-          <PhotoSlot label="Sala" />
+          <img src={medioEscola.url} alt="Ensino médio — escola" loading="lazy" className="aspect-[4/3] w-full rounded-xl object-cover border border-border/60 shadow-card" />
+          <img src={medioTurma.url} alt="Ensino médio — turma" loading="lazy" className="aspect-[4/3] w-full rounded-xl object-cover border border-border/60 shadow-card" />
+          <img src={medioPatio.url} alt="Ensino médio — pátio" loading="lazy" className="aspect-[4/3] w-full rounded-xl object-cover border border-border/60 shadow-card" />
+          <img src={medioSala.url} alt="Ensino médio — sala" loading="lazy" className="aspect-[4/3] w-full rounded-xl object-cover border border-border/60 shadow-card" />
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
