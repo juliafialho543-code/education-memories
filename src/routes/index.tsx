@@ -336,7 +336,7 @@ function Fundamental() {
           <MemoryCard
             icon={Compass}
             title="Excursão para Ipatinga"
-            description="Uma viagem inesquecível: o encanto do shopping pela primeira vez e o zoológico cheio de descobertas, risadas e fotos com os colegas."
+            description="Uma viagem inesquecível: o encanto do shopping pela primeira vez com os amigos e o zoológico cheio de descobertas, risadas e fotos com os colegas."
             images={[ipatinga1.url, ipatinga2.url, ipatinga3.url]}
           />
           <MemoryCard
