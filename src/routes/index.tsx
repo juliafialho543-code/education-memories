@@ -125,7 +125,7 @@ function Hero() {
         </h1>
         <p className="mt-6 mx-auto max-w-2xl text-base sm:text-lg text-muted-foreground reveal">
           Uma viagem afetiva pelos caminhos que me trouxeram até aqui — da infância em Raul Soares
-          até a jornada na Pedagogia.
+          até a jornada na Pedagogia na UFV.
         </p>
         <div className="mt-10 flex justify-center gap-3 reveal">
           <a href="#quem-sou-eu" className="px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium shadow-soft hover:translate-y-[-2px] transition-transform">
