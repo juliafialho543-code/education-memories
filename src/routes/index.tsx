@@ -37,6 +37,7 @@ import medioTurma from "@/assets/medio-sala.png.asset.json";
 import medioPatio from "@/assets/medio-turma.png.asset.json";
 import medioSala from "@/assets/medio-aula.png.asset.json";
 import jantar1 from "@/assets/jantar-1.png.asset.json";
+import jantar1New from "@/assets/jantar-1-new.png.asset.json";
 import jantar2 from "@/assets/jantar-2.png.asset.json";
 import interclasse1 from "@/assets/interclasse-1.png.asset.json";
 import interclasse2 from "@/assets/interclasse-2.png.asset.json";
@@ -386,7 +387,7 @@ function Medio() {
             icon={Sparkles}
             title="Jantar do Terceiro Ano"
             description="A celebração da conclusão do Ensino Médio — entre lágrimas e sorrisos, um brinde a tudo o que vivemos juntos."
-            images={[jantar1.url, jantar2.url]}
+            images={[jantar1New.url, jantar2.url]}
           />
           <MemoryCard
             icon={Trophy}
