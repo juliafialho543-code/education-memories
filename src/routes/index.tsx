@@ -318,11 +318,11 @@ function Fundamental() {
   return (
     <section id="fundamental" className="py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionTitle eyebrow="Seção 2 · 2014 — 2021" title="Minha Trajetória no Ensino Fundamental" icon={BookOpen} />
+        <SectionTitle eyebrow="Seção 2 · 2013 — 2021" title="Minha Trajetória no Ensino Fundamental" icon={BookOpen} />
         <Timeline
           school="Escola Municipal Coronel João Domingos"
           location="Raul Soares — MG"
-          period="2014 a 2021"
+          period="2013 a 2021"
           image={schoolElementary}
         />
 
