@@ -425,7 +425,7 @@ function Futuro() {
             <div className="relative mx-auto max-w-sm">
               <div className="absolute -inset-4 bg-accent/30 rounded-[2rem] rotate-3" />
               <img
-                src={futureImg}
+                src={futureAsset.url}
                 alt="Julia hoje, estudante de Pedagogia"
                 width={1024}
                 height={1024}
