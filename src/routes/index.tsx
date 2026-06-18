@@ -37,6 +37,7 @@ import medioTurma from "@/assets/medio-sala.png.asset.json";
 import medioPatio from "@/assets/medio-turma.png.asset.json";
 import medioSala from "@/assets/medio-aula.png.asset.json";
 import jantar1 from "@/assets/jantar-1.png.asset.json";
+import jantar1New from "@/assets/jantar-1-new.png.asset.json";
 import jantar2 from "@/assets/jantar-2.png.asset.json";
 import interclasse1 from "@/assets/interclasse-1.png.asset.json";
 import interclasse2 from "@/assets/interclasse-2.png.asset.json";
