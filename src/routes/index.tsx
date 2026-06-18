@@ -36,6 +36,10 @@ import medioEscola from "@/assets/medio-patio.png.asset.json";
 import medioTurma from "@/assets/medio-sala.png.asset.json";
 import medioPatio from "@/assets/medio-turma.png.asset.json";
 import medioSala from "@/assets/medio-aula.png.asset.json";
+import jantar1 from "@/assets/jantar-1.png.asset.json";
+import jantar2 from "@/assets/jantar-2.png.asset.json";
+import interclasse1 from "@/assets/interclasse-1.png.asset.json";
+import interclasse2 from "@/assets/interclasse-2.png.asset.json";
 
 const portrait = portraitAsset.url;
 const schoolElementary = schoolFundamentalAsset.url;
@@ -156,7 +160,7 @@ function QuemSouEu() {
     { icon: MapPin, label: "Cidade natal", value: "Raul Soares — MG" },
     { icon: Calendar, label: "Data de nascimento", value: "08 de janeiro de 2007" },
     { icon: Sparkles, label: "Idade", value: "19 anos" },
-    { icon: GraduationCap, label: "Curso atual", value: "Pedagogia" },
+    { icon: GraduationCap, label: "Curso atual", value: "Pedagogia UFV" },
     { icon: Heart, label: "Características", value: "Carinhosa, atenciosa, organizada e responsável" },
   ];
   return (
@@ -181,7 +185,7 @@ function QuemSouEu() {
             <p className="text-lg md:text-xl leading-relaxed text-foreground/85">
               Meu nome é <strong className="text-foreground">Julia Fialho Freire</strong>. Sou natural
               de Raul Soares-MG, nasci em 08 de janeiro de 2007 e atualmente sou estudante do curso
-              de <strong className="text-foreground">Pedagogia</strong>. Sou uma pessoa carinhosa,
+              de <strong className="text-foreground">Pedagogia na UFV</strong>. Sou uma pessoa carinhosa,
               atenciosa, organizada e responsável. Gosto de ajudar as pessoas e acredito que a
               educação tem um papel fundamental na transformação da sociedade.
             </p>
@@ -313,7 +317,7 @@ function Fundamental() {
   return (
     <section id="fundamental" className="py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionTitle eyebrow="Seção 4 · 2014 — 2021" title="Minha Trajetória no Ensino Fundamental" icon={BookOpen} />
+        <SectionTitle eyebrow="Seção 2 · 2014 — 2021" title="Minha Trajetória no Ensino Fundamental" icon={BookOpen} />
         <Timeline
           school="Escola Municipal Coronel João Domingos"
           location="Raul Soares — MG"
@@ -353,24 +357,16 @@ function Fundamental() {
             images={[pandemiaFormatura1.url, pandemiaFormatura2.url]}
           />
         </div>
-
-        <TeachersStrip
-          teachers={[
-            { name: "Professor Luan", subject: "Português" },
-            { name: "Professora Letícia", subject: "História" },
-          ]}
-        />
       </div>
     </section>
   );
 }
 
 function Medio() {
-  const friends = ["Julia", "Camila", "Maria Luiza", "Sibele", "Evellyn", "Davi"];
   return (
     <section id="medio" className="py-24 md:py-32 bg-gradient-sky">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionTitle eyebrow="Seção 5 · 2022 — 2024" title="Minha Trajetória no Ensino Médio" icon={GraduationCap} />
+        <SectionTitle eyebrow="Seção 3 · 2022 — 2024" title="Minha Trajetória no Ensino Médio" icon={GraduationCap} />
         <Timeline
           school="Escola Estadual Regina Pacis"
           location="Raul Soares — MG"
@@ -385,56 +381,20 @@ function Medio() {
           <img src={medioSala.url} alt="Ensino médio — sala" loading="lazy" className="aspect-[4/3] w-full rounded-xl object-cover border border-border/60 shadow-card" />
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          <MemoryCard
-            icon={GraduationCap}
-            title="Mostra Universitária da UFV"
-            description="Conhecer o campus foi um divisor de águas: me fez refletir sobre o futuro acadêmico e plantou a semente da Pedagogia."
-            photos={2}
-          />
+        <div className="grid md:grid-cols-2 gap-6">
           <MemoryCard
             icon={Sparkles}
             title="Jantar do Terceiro Ano"
             description="A celebração da conclusão do Ensino Médio — entre lágrimas e sorrisos, um brinde a tudo o que vivemos juntos."
-            photos={2}
+            images={[jantar1.url, jantar2.url]}
           />
           <MemoryCard
             icon={Trophy}
             title="Interclasse Campeão"
             description="A conquista da turma, a vibração coletiva e a união entre os colegas — uma vitória que ficou guardada no coração."
-            photos={2}
+            images={[interclasse1.url, interclasse2.url]}
           />
         </div>
-
-        <div className="reveal mt-14 rounded-3xl bg-card border border-border/60 shadow-card overflow-hidden">
-          <div className="p-8">
-            <div className="flex items-center gap-2 text-primary font-semibold">
-              <Heart className="h-5 w-5" />
-              Amigos Marcantes
-            </div>
-            <p className="mt-3 text-muted-foreground max-w-2xl">
-              Essas amizades foram essenciais na minha formação pessoal e escolar. Cada um deixou uma
-              marca única e me ajudou a ser quem sou hoje.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              {friends.map((f) => (
-                <div key={f} className="flex items-center gap-3 pl-2 pr-5 py-2 rounded-full bg-secondary border border-border/60">
-                  <div className="grid place-items-center h-8 w-8 rounded-full bg-primary text-primary-foreground text-sm font-semibold">
-                    {f.charAt(0)}
-                  </div>
-                  <span className="font-medium">{f}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <TeachersStrip
-          teachers={[
-            { name: "Elaine", subject: "Química" },
-            { name: "Ramon", subject: "Matemática" },
-          ]}
-        />
       </div>
     </section>
   );
@@ -450,12 +410,12 @@ function Futuro() {
   return (
     <section id="futuro" className="py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <SectionTitle eyebrow="Seção 7" title="Presente e Futuro" icon={Compass} />
+        <SectionTitle eyebrow="Seção 4" title="Presente e Futuro" icon={Compass} />
 
         <div className="grid md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] gap-12 items-center">
           <div className="reveal">
             <p className="text-lg md:text-xl leading-relaxed text-foreground/85">
-              Hoje sou estudante de <strong className="text-foreground">Pedagogia</strong> e reconheço
+              Hoje sou estudante de <strong className="text-foreground">Pedagogia na UFV</strong> e reconheço
               que cada etapa da minha trajetória escolar contribuiu para minha formação pessoal e
               acadêmica. As experiências vividas, os professores que encontrei, os amigos que fiz e os
               desafios que enfrentei ajudaram a construir quem sou atualmente.
