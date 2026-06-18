@@ -386,7 +386,7 @@ function Medio() {
             icon={Sparkles}
             title="Jantar do Terceiro Ano"
             description="A celebração da conclusão do Ensino Médio — entre lágrimas e sorrisos, um brinde a tudo o que vivemos juntos."
-            images={[jantar1.url, jantar2.url]}
+            images={[jantar1New.url, jantar2.url]}
           />
           <MemoryCard
             icon={Trophy}
