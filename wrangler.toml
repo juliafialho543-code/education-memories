@@ -1,4 +1,5 @@
-name = "tanstack-start-ts"
+
+name = 'historias-juju'
 main = "dist/server/index.mjs"
 compatibility_date = "2026-06-18"
 compatibility_flags = ["nodejs_compat"]
